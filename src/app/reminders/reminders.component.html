@@ -1,0 +1,43 @@
+<div class="reminders__container">
+  <h1 class="reminders__title">Reminders</h1>
+
+  <form [formGroup]="myForm" novalidate (ngSubmit)="add(reminderText.value, reminderHour.value, reminderMin.value, reminderSec.value); reminderText.value=''; reminderHour.value=''; reminderMin.value=''; reminderSec.value=''">
+    <div class="reminders__flex">
+      <label class="reminders__label">Text: </label>
+      <input class="reminders__input" formControlName="text" #reminderText/>
+    </div>
+
+    <div class="reminders__flex">
+      <label class="reminders__label">Hour: </label>
+      <input class="reminders__input" maxlength="2" formControlName="hour" #reminderHour/>
+
+      <label class="reminders__label">Min: </label>
+      <input class="reminders__input" maxlength="2" formControlName="min" #reminderMin/>
+
+      <label class="reminders__label">Sec: </label>
+      <input class="reminders__input" maxlength="2" formControlName="sec" #reminderSec/>
+    </div>
+
+    <button class="reminders__btn_add" [disabled]="myForm.invalid">Add</button>
+  </form>
+
+  <div class="reminders__link_container">
+    <ul class="reminders__ul">
+      <li class="reminders__li" *ngFor="let reminder of reminders">
+        <a class="reminders__a" routerLink="/detail/{{reminder.id}}">
+          <span class="reminders__id">{{reminder.id}}</span>
+          <span class="reminders__text" [ngClass]="{'done' : reminder.id == isId}">{{reminder.text}}</span>
+          <span class="reminders__time" [ngClass]="{'done' : reminder.id == isId}">{{reminder.hour}}:{{reminder.min}}:{{reminder.sec}}</span>
+        </a>
+        <button class="reminders__btn_delete" (click)="delete(reminder)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="bg__message" *ngIf="isOpen==true">
+    <div class="box__message">
+      <h1 class="message">{{message}}</h1>
+      <button class="btn__message" (click)="showWindow()">X</button>
+    </div>
+  </div>
+</div>

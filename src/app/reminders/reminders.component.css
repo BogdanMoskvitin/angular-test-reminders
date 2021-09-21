@@ -1,0 +1,134 @@
+.reminders__container {
+  max-width: 1110px;
+  margin: 50px auto;
+}
+.reminders__title {
+  font-size: 30px;
+  color: #495867;
+}
+.reminders__flex {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+.reminders__label {
+  font-size: 20px;
+  color: #495867;
+  margin-right: 10px;
+}
+.reminders__input {
+  font-size: 20px;
+  height: 42px;
+  width: 100%;
+  margin-right: 10px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #495867;
+  border-radius: 5px;
+}
+.reminders__input:focus {
+  box-shadow: 0 14px 28px rgba(73,88,103,0.25), 0 5px 5px rgba(73,88,103,0.22);
+}
+.reminders__btn_add {
+  font-size: 20px;
+  height: 42px;
+  width: 100%;
+  color: #495867;
+  background-color: #bdd5ea;
+  border: 1px solid #495867;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reminders__btn_add:hover {
+  background-color: #577399;
+  color: #f7f7ff;
+}
+
+.reminders__link_container {
+  margin-top: 50px;
+}
+.reminders__li {
+  list-style-type: none;
+  margin: 10px 0; 
+  display: flex;
+  align-items: center;
+}
+.reminders__li:hover {
+  padding-left: 10px;
+}
+.reminders__a {
+  text-decoration: none;
+}
+.reminders__id {
+  font-size: 20px;
+  color: #495867;
+  background-color: #495867;
+  padding: 10px;
+  color: #f7f7ff;
+  border-radius: 5px 0 0 5px;
+}
+.reminders__text {
+  font-size: 20px;
+  color: #495867;
+  background-color: #bdd5ea;
+  padding: 10px;
+}
+.reminders__time {
+  font-size: 20px;
+  color: #495867;
+  background-color: #bdd5ea;
+  padding: 10px;
+}
+.reminders__btn_delete {
+  font-size: 20px;
+  background-color: #495867;
+  border: none;
+  height: 42px;
+  width: 30px;
+  color: #f7f7ff;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+input.ng-touched.ng-invalid {border:solid red 2px;}
+input.ng-touched.ng-valid {border:solid green 2px;}
+
+
+.bg__message {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 100;
+  background-color: rgba(73,88,103,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box__message {
+  width: 500px;
+  height: 200px;
+  background-color: #f7f7ff;
+  border-radius: 5px;
+}
+.message {
+  font-size: 30px;
+  color: #495867;
+  margin: 20px 10px 0 20px;
+  display: inline-block;
+}
+.btn__message {
+  font-size: 20px;
+  background-color: #495867;
+  border: none;
+  height: 42px;
+  width: 42px;
+  color: #f7f7ff;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+
+.done {
+  background-color: red;
+}

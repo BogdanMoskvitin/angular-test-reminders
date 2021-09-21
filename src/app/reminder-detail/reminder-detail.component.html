@@ -1,0 +1,21 @@
+<div class="detail__container" *ngIf="reminder">
+  <form [formGroup]="myForm" novalidate (ngSubmit)="save()">
+    <div class="detail__flex">
+      <label class="detail__label">Text: </label>
+      <input class="detail__input" formControlName="text" [(ngModel)]="reminder.text"/>
+    </div>
+    <div class="detail__flex">
+      <label class="detail__label">Hour: </label>
+      <input class="detail__input" maxlength="2" formControlName="hour" [(ngModel)]="reminder.hour"/>
+
+      <label class="detail__label">Min: </label>
+      <input class="detail__input" maxlength="2" formControlName="min" [(ngModel)]="reminder.min" />
+      
+      <label class="detail__label">Sec: </label>
+      <input class="detail__input" maxlength="2" formControlName="sec" [(ngModel)]="reminder.sec"/>
+    </div>
+  
+    <button class="detail__btn_back" (click)="goBack()">go back</button>
+    <button class="detail__btn_save" [disabled]="myForm.invalid">save</button>
+  </form>
+</div>

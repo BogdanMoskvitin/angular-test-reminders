@@ -1,0 +1,60 @@
+.detail__container {
+  max-width: 1110px;
+  margin: 50px auto;
+}
+.detail__flex {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+.detail__label {
+  font-size: 20px;
+  color: #495867;
+  margin-right: 10px;
+}
+.detail__input {
+  font-size: 20px;
+  height: 42px;
+  width: 100%;
+  margin-right: 10px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #495867;
+  border-radius: 5px;
+}
+.detail__input:focus {
+  box-shadow: 0 14px 28px rgba(73,88,103,0.25), 0 5px 5px rgba(73,88,103,0.22);
+}
+.detail__btn_back {
+  font-size: 20px;
+  height: 42px;
+  width: 100%;
+  color: #495867;
+  background-color: #bdd5ea;
+  border: 1px solid #495867;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.detail__btn_back:hover {
+  background-color: #577399;
+  color: #f7f7ff;
+}
+.detail__btn_save {
+  font-size: 20px;
+  height: 42px;
+  width: 100%;
+  color: #495867;
+  background-color: #bdd5ea;
+  border: 1px solid #495867;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.detail__btn_save:hover {
+  background-color: #577399;
+  color: #f7f7ff;
+}
+
+
+input.ng-touched.ng-invalid {border:solid red 2px;}
+input.ng-touched.ng-valid {border:solid green 2px;}
